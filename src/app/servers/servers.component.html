@@ -1,0 +1,19 @@
+<a routerLink="/users">Go to users</a>
+<div class="row">
+  <button (click)="reloadPage()" class="btn btn-primary">Reload page</button>
+  <div class="col-xs-12 col-sm-4">
+    <div class="list-group">
+      <a
+        routerLink="/servers/{{server.id}}"
+        routerLinkActive="active"
+        class="list-group-item"
+        *ngFor="let server of servers">
+        {{ server.name }}
+      </a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
